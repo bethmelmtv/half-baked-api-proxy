@@ -9,7 +9,7 @@ export default function PokemonSearch() {
   async function handlePokemonSubmit(e) {
     e.preventDefault();
 
-    // set the loading state to true
+    // set the loading state to true////
     setLoading(true);
     // use fetch to make a request to your netlify pokemon function. Be sure to pass the pokemon name as a query param in the URL
     const response = await getPokemonData(pokemonQuery);
