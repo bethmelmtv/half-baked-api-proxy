@@ -1,4 +1,5 @@
 require('dotenv').config();
+const fetch = require('node-fetch');
 
 const headers = {
   'Access-Control-Allow-Origin': '*',
@@ -26,7 +27,7 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       headers,
       // this is where you shoot data back to the user. right now it's sending an empty object--replace this with the pokemon data. remember, you do need to stringify it, otherwise netlify gets mad. ¯\_(ツ)_/¯
-      body: JSON.stringify({}),
+      body: json.stringify({}),
     };
   } catch (error) {
     console.log(error);

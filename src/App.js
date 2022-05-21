@@ -1,37 +1,52 @@
 import PokemonSearch from './PokemonSearch';
 import YelpSearch from './YelpSearch';
-import WeatherSearch from './WeatherSearch';
-import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [yelpData, setYelpData] = useState([]);
-  const [weatherData, setWeatherData] = useState([]);
+  // const [yelpData, setYelpData] = useState([]);
+  // const [pokemonData, setPokemonData] = useState([]);
 
-  const [yelpQuery, setYelpQuery] = useState('');
-  const [weatherQuery, setWeatherQuery] = useState('');
+  // const [pokemonQuery, setPokemonQuery] = useState('pokemon');
+  // const [yelpQuery, setYelpQuery] = useState('');
 
-  useEffect(() => {
-    load();
-  }, []);
+  // //WEATHER
+  // // const [weatherData, setWeatherData] = useState([]);
+
+  // useEffect(() => {}, []); //what does [] do?
 
   // async function handleYelpSearch(e) {
   //   e.preventDefault();
+
   //   const response = await getYelpData(yelpQuery);
-  //   setYelpQuery(response);
+
+  //   console.log('yelp search', response.data.businesses);
+
+  //   setYelpQuery(response.data.businesses);
   // }
 
-  // async function handleWeatherSearch(e) {
+  // async function handlePokemonSearch(e) {
   //   e.preventDefault();
-  //   const response = await getWeatherData(weatherQuery);
-  //   setWeatherQuery(response);
+
+  //   const response = await getPokemonData(pokemonQuery);
+
+  //   setPokemonQuery(response);
   // }
+  // //how come there are no return in the functions above?
+
+  // //WEATHER
+  // // async function handleWeatherSearch(e) {
+  // //   e.preventDefault();
+  // //   const response = await getWeatherData(weatherQuery);
+  // //   setWeatherQuery(response);
+  // // }
 
   return (
     <div className="App">
       <PokemonSearch />
-      <YelpSearch />
-      <WeatherSearch />
+
+      {/* <YelpSearch /> */}
+
+      {/* <WeatherSearch /> */}
       {/* stretch goal: <WeatherSearch /> */}
     </div>
   );
