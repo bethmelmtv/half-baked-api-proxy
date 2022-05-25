@@ -8,7 +8,7 @@ require('dotenv').config();
 //   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
 // };
 
-exports.handler = async function (event) {
+exports.handler = async (event) => {
   try {
     //why is try here
     const response = await fetch(

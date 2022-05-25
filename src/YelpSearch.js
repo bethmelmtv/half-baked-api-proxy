@@ -15,7 +15,7 @@ export default function YelpSearch() {
 
   async function load() {
     const results = await getYelpData(yelpQuery);
-    console.log(results.data.businesses);
+    // console.log(results.data.businesses);
     setYelpData(results.data.businesses);
   }
 
