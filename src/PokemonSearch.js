@@ -1,26 +1,26 @@
 import { getPokemonData } from './services/fetch-utils.js';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import PokemonList from './PokemonList';
 
 export default function PokemonSearch() {
   // you'll need to track your pokemon search results, the loading state, and one form field: name. For this form field, set a real initial values (like 'pikachu') so the form populates with a default value.
   const [pokemonData, setPokemonData] = useState([]);
   const [pokemonQuery, setPokemonQuery] = useState('pikachu');
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   async function handlePokemonSubmit(e) {
     e.preventDefault();
-    console.log(pokemonQuery);
+    // console.log(pokemonQuery);
     // set the loading state to true////
-    setLoading(true);
+    // setLoading(true);
     // use fetch to make a request to your netlify pokemon function. Be sure to pass the pokemon name as a query param in the URL
     const response = await getPokemonData(pokemonQuery);
-    console.log(response);
+    // console.log(response);
     //getPokemonData is coming from fetch/utils which is our endpoint
     // put the jsonified data in state and set the loading state to false
-    setPokemonData(response);
+    setPokemonData(response.data.results);
 
-    setLoading(false);
+    // setLoading(false);
   }
 
   return (

@@ -9,14 +9,13 @@ export async function getPokemonData(searchFilter) {
   const data = await rawResponse.json();
   //what does .json() do? why is it a function?
 
-  console.log(data);
+  // console.log(data);
   return data;
 }
 
 export async function getYelpData(searchFilter) {
-  const rawResponse = await fetch(`/.netlify/function/yelp?searchFilter=${searchFilter}`);
+  const rawResponse = await fetch(`/.netlify/functions/yelp?searchFilter=${searchFilter}`);
   const data = await rawResponse.json();
-
   return data;
 }
 

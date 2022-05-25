@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function PokemonList({ pokemonData }) {
-  console.log(pokemonData);
   return (
     <div>
       <div>PokemonList</div>
